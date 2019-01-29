@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="iOS test suite on iPhone Simulator">
+    <parameter name="OS" value="Android"/>
+    <parameter name="appType" value="Phone"/>
+    <parameter name="deviceType" value="Emulator"/>
+    <parameter name="deviceName" value="Nexus_One_API_27"/>
+    <parameter name="version" value="8.1"/>
+    <test name="Go to Home page" preserve-order="true">
+        <classes>
+            <class name="Android.MenuPageTest"/>
+            <class name="Business.BusinessPageTest"/>
+            <class name="Entertainment.EntertainmentPageTest"/>
+            <class name="Fashion.FashionPageTest"/>
+            <class name="LatestNews.LatestNewsPageTest"/>
+            <class name="LivingPage.LivingPageTest"/>
+            <class name="MediaPage.MediaPageTest"/>
+            <class name="MetroPage.MetroPageTest"/>
+            <class name="NewsPage.NewsPageTest"/>
+            <class name="Notification.NotificationsPageTest"/>
+            <class name="opinionPage.Opinion"/>
+            <class name="PageSix.PageSixPageTest"/>
+            <class name="PhotoPage.PhotosPageTest"/>
+            <class name="RealEstatePage.RealEstatePageTest"/>
+            <class name="SearchPage.SearchPageTest"/>
+            <class name="settingsPage.Settings"/>
+            <class name="Tech.TestTechPage"/>
+            <class name="TopNews.TopNewsTest"/>
+            <class name="Videos.TestVideos"/>
+            <class name="Tech.TestTechPage"/>
+        </classes>
+    </test>
+</suite>
