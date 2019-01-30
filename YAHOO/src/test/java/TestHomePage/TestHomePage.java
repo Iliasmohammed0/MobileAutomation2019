@@ -21,6 +21,10 @@ public class TestHomePage extends HomePage{
     @Test
     public void testTopStoriesTexts(){ getTopStoriesText(); }
     @Test
+    public void testTopVideos(){ clickTopVideos(); }
+    @Test
+    public void testTopVideosTexts(){ getTopVideosText(); }
+    @Test
     public void testOriginalsLink(){clickOriginalOption(); }
     @Test
     public void testOriginalsText(){ getOriginalsText(); }
@@ -33,20 +37,5 @@ public class TestHomePage extends HomePage{
         clickHomePageSearch();
     }
     @Test
-    public void testSearch() {
-        clickHomePageSearch();
-        searchBar("Sports"); }
-    @Test
-    public void testFirstStory(){
-        clickFirstStory(); }
-    @Test
-    public void testShare(){
-        clickShare(); }
-    @Test
-    public void testBookmark(){
-        clickBookmark(); }
-    @Test
-    public void testSecondStory(){
-        clickSecondStory();
-    }
+    public void testSearch() { clickHomePageSearch();searchBar("Sports"); }
 }

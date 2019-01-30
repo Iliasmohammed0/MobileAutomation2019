@@ -36,7 +36,7 @@ public class Base {
     public DesiredCapabilities cap = null;
     @Parameters({"OS","appType","deviceType", "deviceName","version"})
     @BeforeMethod
-    public void setUp(@Optional("Android") String OS,@Optional("Phone") String appType,@Optional("Emulator") String deviceType,@Optional("Nexus_One_API_27") String deviceName,
+    public void setUp(@Optional("Android") String OS,@Optional("Phone") String appType,@Optional("Emulator") String deviceType,@Optional("Pixel_XL_API_28") String deviceName,
                       @Optional("8.1")String version)throws IOException,InterruptedException{
 
         if(OS.equalsIgnoreCase("ios")){
