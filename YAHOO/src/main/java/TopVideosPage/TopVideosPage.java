@@ -25,11 +25,8 @@ public class TopVideosPage extends Base {
     public void getFirstVideoText(){
         WebElement firstVideo=ad.findElement(By.id("com.yahoo.mobile.client.android.yahoo:id/title_text_view"));
         String expected = firstVideo.getText();
-        String actual = "They got Roger Stone. Now what?";
-        Assert.assertEquals(expected, actual);
         System.out.println("***********************************************************");
-        System.out.println("\tExpected: " + expected);
-        System.out.println("\tActual: " + actual);
+        System.out.println("\tText: " + expected);
         System.out.println("************************************************************");
 
     }

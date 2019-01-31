@@ -5,6 +5,7 @@ import TopStoriesPage.TopStoriesPage;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import reporting.TestLogger;
 
 public class TestTopStoriesPage extends TopStoriesPage{
     TopStoriesPage TopStoriesPage;
@@ -13,27 +14,34 @@ public class TestTopStoriesPage extends TopStoriesPage{
         TopStoriesPage = PageFactory.initElements(ad, TopStoriesPage.class);
     }
     @Test
-    public void testFirstStory(){ clickFirstStory(); }
+    public void testFirstStory(){
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
+        clickFirstStory(); }
     @Test
-    public void testFirstStoryText(){ getFirstHeadlineText(); }
+    public void testFirstStoryText(){
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
+        getFirstHeadlineText(); }
     @Test
-    public void testSecondStory(){ clickSecondStory(); }
+    public void testFirstStorySize(){
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
+        getFirstStorysize(); }
     @Test
-    public void testSecondStoryText(){
-        getSecondHeadlineText();
-    }
-    @Test
-    public void testThirdStory(){
-        clickThirdStory();
-    }
-    @Test
-    public void testThirdStoryText(){
-        getThirdHeadlineText();
+    public void testSecondStoryLocation(){
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
+        getFirstStoryLocation();
     }
     @Test
     public void testShare(){
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
         clickShare(); }
     @Test
     public void testBookmark(){
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
         clickBookmark(); }
 }

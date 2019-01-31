@@ -5,6 +5,7 @@ import OriginalsPage.OriginalsPage;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import reporting.TestLogger;
 
 public class TestOriginalsPage extends OriginalsPage {
     HomePage HomePage;
@@ -18,14 +19,29 @@ public class TestOriginalsPage extends OriginalsPage {
     }
 
     @Test
-    public void testOriginalsTopStory(){ clickOriginalsFirstStory(); }
+    public void testOriginalsTopStory(){
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
+        clickOriginalsFirstStory(); }
     @Test
-    public void testOriginalTopStoryText(){ getOriginalTopStoryText(); }
+    public void testOriginalTopStoryText(){
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
+        getOriginalTopStoryText(); }
     @Test
-    public void testOriginalStorySize(){ getSizeOriginalStory(); }
+    public void testOriginalStorySize(){
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
+        getSizeOriginalStory(); }
     @Test
-    public void testTagNameOriginalStory(){ getTagOriginalStory(); }
+    public void testTagNameOriginalStory(){
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
+        getTagOriginalStory(); }
     @Test
-    public void testOriginalStoryLocation(){ getFirstOriginalsStoryLocation(); }
+    public void testOriginalStoryLocation(){
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
+        getFirstOriginalsStoryLocation(); }
 
 }

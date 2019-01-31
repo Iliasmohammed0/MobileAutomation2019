@@ -5,6 +5,7 @@ import TopVideosPage.TopVideosPage;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import reporting.TestLogger;
 
 public class TestTopVideosPage extends TopVideosPage {
     HomePage HomePage;
@@ -18,24 +19,35 @@ public class TestTopVideosPage extends TopVideosPage {
     }
     @Test
     public void testVideoTitleText(){
-    checkVideoTitleText();
-    }
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
+        checkVideoTitleText(); }
     @Test
     public void testPlayFirstVideo(){
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
         clickFirstVideo();
     }
     @Test
     public void testFirstVideoText(){
-        getFirstVideoText();
-    }
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
+        getFirstVideoText(); }
     @Test
     public void testFirstVideoSize(){
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
         getFirstVideoSize();
     }
     @Test
     public void testFirstVideoTagName(){
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
         getFirstVideoTagName();
     }
     @Test
-    public void testFirstVideoLocation(){ getTrendingFirstVideoLocation(); }
+    public void testFirstVideoLocation(){
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
+        getTrendingFirstVideoLocation(); }
 }

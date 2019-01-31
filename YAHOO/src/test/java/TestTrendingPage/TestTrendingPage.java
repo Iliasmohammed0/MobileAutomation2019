@@ -5,6 +5,7 @@ import TrendingPage.TrendingPage;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import reporting.TestLogger;
 
 public class TestTrendingPage extends TrendingPage {
     HomePage HomePage;
@@ -17,23 +18,36 @@ public class TestTrendingPage extends TrendingPage {
         Thread.sleep(4000);
     }
     @Test
-    public void testTrendingTitleText(){ checkTrendingText(); }
+    public void testTrendingTitleText(){
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
+        checkTrendingText(); }
     @Test
     public void testTrendingArticle(){
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
         clickTrendingArictle();
     }
     @Test
     public void testTrendingArticleText(){
-        getTrendingArticleText();
-    }
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
+        getTrendingArticleText(); }
     @Test
     public void testTrendingArticleSize(){
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
         getTrendingArticleSize();
     }
     @Test
     public void testTrendingArticleTagName(){
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
         getTrendingArticleTagName();
     }
     @Test
-    public void testTrendingArticleLocation(){ getTrendingArticleLocation(); }
+    public void testTrendingArticleLocation(){
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
+        getTrendingArticleLocation(); }
 }
