@@ -22,9 +22,8 @@
             <!--<class name="iPhone.ToolbarTest"/>-->
             <!--<class name="iPhone.TransitionsTest"/>-->
             <!--<class name="iPhone.WebTest"/>-->
-
-            <class name="iPhone.TextFieldsTest"/>
-            <class name="iPhone.PickerTest"/>
+            <!--<class name="iPhone.TextFieldsTest"/>-->
+            <!--<class name="iPhone.PickerTest"/>-->
 
         </classes>
     </test>
