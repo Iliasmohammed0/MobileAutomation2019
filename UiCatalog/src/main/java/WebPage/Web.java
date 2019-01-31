@@ -4,7 +4,7 @@ import common.Base;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class WebPage extends Base {
+public class Web extends Base {
     @FindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Use of UIWebView\"]")
     public static WebElement web;
     @FindBy(xpath = "//XCUIElementTypeOther[@name=\"Global, navigation\"]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]\n" + "\n")
@@ -13,4 +13,4 @@ public class WebPage extends Base {
         web.click();}
     public void appleWebsite() {
         website.click();}
-}
+    }
