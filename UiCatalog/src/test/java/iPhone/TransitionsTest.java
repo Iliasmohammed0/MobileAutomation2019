@@ -1,19 +1,22 @@
 package iPhone;
 
-import Transitions.Transitions;
+import TransitionsPage.Transitions;
+import UiCatalogPage.UiCatalog;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class TransitionsTest extends Transitions {
-    Transitions transitions;
-
-    @BeforeMethod
-    public void initElements()throws InterruptedException {
-        transitions = PageFactory.initElements(ad, Transitions.class);}
+public class TransitionsTest extends Transitions{
+    public Transitions transitions(){
+        UiCatalog uiCatalog = PageFactory.initElements(ad, UiCatalog.class);
+        uiCatalog.getTransitions();
+        return PageFactory.initElements(ad, Transitions.class);
+    }
     @Test
-    public void testImageButton(){
-        transitions.clickOnFlipImage();
+    public void imageTest() throws InterruptedException {
+        transitions().flipImage();
     }
+    @Test
+    public void tintedTest() throws InterruptedException {
+        transitions().curlImage();
     }
-
+}

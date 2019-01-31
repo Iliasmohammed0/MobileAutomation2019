@@ -1,6 +1,6 @@
 package iPhone;
 
-import SearchBar.SearchBar;
+import SearchBarPage.SearchBar;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -8,12 +8,11 @@ import org.testng.annotations.Test;
 public class SearchBarTest extends SearchBar {
     SearchBar searchBar;
     @BeforeMethod
-    public void initElements() {
+    public void setUp(){
         searchBar = PageFactory.initElements(ad, SearchBar.class);
     }
-
     @Test
-    public void testSearchBar(){
-        searchBar.clickOnSearchBar();
+    public void testPicker1() throws InterruptedException {
+        searchBar.setSearchBar();
     }
 }

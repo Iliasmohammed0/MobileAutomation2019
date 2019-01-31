@@ -1,16 +1,30 @@
 package iPhone;
 
-import Pickers.Picker;
+import PickersPage.Picker;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
 public class PickerTest extends Picker {
     Picker picker;
+
     @BeforeMethod
-    public void initElements(){
-        picker= PageFactory.initElements(ad, Picker.class);}
+    public void setUp() {
+        picker = PageFactory.initElements(ad, Picker.class);
+    }
+
     @Test
-    public void testActionSheetSimple() throws InterruptedException {
-        picker.clickPicker();
+    public void testPicker1() throws InterruptedException {
+        picker.showDate();
+    }
+
+    @Test
+    public void testPicker2() throws InterruptedException {
+        picker.showUI();
+    }
+
+    @Test
+    public void testPicker3() throws InterruptedException {
+        picker.showCustom1();
     }
 }
