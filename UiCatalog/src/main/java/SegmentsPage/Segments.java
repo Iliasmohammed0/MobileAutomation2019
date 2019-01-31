@@ -38,6 +38,9 @@ public class Segments extends Base {
     @FindBy(xpath = "(//XCUIElementTypeButton[@name=\"Tools\"])[5]")
     public static WebElement uiSegmentImageTools;
 
+    public void clickSegments(){
+        Segments.click();
+    }
     public void setUiSegmentControl(){
         Segments.click();
         clickByXpathWebElement(uiSegmentedControlCheck);

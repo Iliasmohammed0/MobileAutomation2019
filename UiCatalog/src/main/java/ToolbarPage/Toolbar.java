@@ -47,7 +47,7 @@ public class Toolbar extends Base {
     public void setItem1(){
         clickByXpathWebElement(item1);
     }
-    public void setItme2(){
+    public void setItem2(){
         clickByXpathWebElement(item2);
     }
     public void setTools(){

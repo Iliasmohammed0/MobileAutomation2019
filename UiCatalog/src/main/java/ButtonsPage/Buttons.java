@@ -10,6 +10,9 @@ public class Buttons extends Base {
 
     @FindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Buttons\"]")
     public static WebElement buttons;
+    public void clickButton(){
+        buttons.click();
+    }
     public void showBackgroundImage(){
         buttons.click();
         String Actual = ad.findElement(By.xpath("//XCUIElementTypeStaticText[@name=\"Background Image\"]")).getText();

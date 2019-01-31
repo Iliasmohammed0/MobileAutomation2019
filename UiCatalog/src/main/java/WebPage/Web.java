@@ -13,4 +13,7 @@ public class Web extends Base {
         web.click();}
     public void appleWebsite() {
         website.click();}
+        public void clickWeb(){
+        web.click();
+        }
     }

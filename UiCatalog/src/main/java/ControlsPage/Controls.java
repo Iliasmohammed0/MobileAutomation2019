@@ -9,6 +9,7 @@ import org.testng.Assert;
 public class Controls extends Base {
     @FindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Controls\"]")
     public static WebElement control;
+    public void clickControl(){ control.click(); }
     public void showSwitch(){
         control.click();
         String Actual = ad.findElement(By.xpath("//XCUIElementTypeStaticText[@name=\"UISwitch\"]")).getText();

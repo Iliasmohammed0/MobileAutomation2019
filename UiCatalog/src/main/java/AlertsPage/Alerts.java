@@ -9,9 +9,10 @@ import org.openqa.selenium.support.FindBy;
 public class Alerts extends Base {
     @FindBy (xpath = "//XCUIElementTypeApplication[@name=\"UICatalog\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[11]")
     public static WebElement alert;
-  @FindBy (xpath = "(//XCUIElementTypeStaticText[@name=\"Show Simple\"])[1]")
+    public void clickAlerts(){ alert.click(); }
+    @FindBy (xpath = "(//XCUIElementTypeStaticText[@name=\"Show Simple\"])[1]")
     public static WebElement simple;
-  public void showSimple(){
+    public void showSimple(){
       alert.click();
       simple.click();
       String Actual = ad.findElement(By.xpath("//XCUIElementTypeStaticText[@name=\"UIActionSheet <title>\"]")).getTagName();

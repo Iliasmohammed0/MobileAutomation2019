@@ -10,6 +10,9 @@ public class Picker extends Base {
     public static WebElement pickers;
     @FindBy(xpath = "//XCUIElementTypeButton[@name=\"UIDatePicker\"]")
     public static WebElement datePickers;
+    public void clickPickers(){
+        pickers.click();
+    }
     public void showDate(){
         pickers.click();
         datePickers.click();

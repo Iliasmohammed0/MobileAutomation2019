@@ -9,6 +9,9 @@ import org.testng.Assert;
 public class TextView extends Base {
     @FindBy(xpath = "//XCUIElementTypeStaticText[@name=\"TextView\"]")
     public static WebElement textView;
+    public void clickTextView(){
+        textView.click();
+    }
     public void setTextView(){
         textView.click();
         String Actual = ad.findElement(By.xpath("//XCUIElementTypeApplication[@name=\"UICatalog\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTextView")).getAttribute("value");
