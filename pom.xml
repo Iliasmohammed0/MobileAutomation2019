@@ -12,7 +12,9 @@
         <module>Generic</module>
         <module>YAHOO</module>
        <module>UiCatalog</module>
+        <module>UiCatalog</module>
     </modules>
+
     <dependencyManagement>
         <dependencies>
             <dependency>

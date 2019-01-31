@@ -58,12 +58,12 @@ public class Base {
 
     @Parameters({"OS", "appType", "deviceType", "deviceName", "version"})
     @BeforeMethod
-    public void setUp(@Optional("Android") String OS, @Optional("Phone") String appType, @Optional("Emulator") String deviceType, @Optional("Pixel_XL_API_28") String deviceName,
-                      @Optional("8.1") String version) throws IOException, InterruptedException {
+    public void setUp(@Optional("ios") String OS, @Optional("iPhone") String appType, @Optional("Simulator") String deviceType, @Optional("iPhone XR") String deviceName,
+                      @Optional("12.1") String version) throws IOException, InterruptedException {
 
         if (OS.equalsIgnoreCase("ios")) {
             if (appType.contains("iPhone")) {
-                appDirectory = new File("Q:\\MobileAutomation2019\\UiCatalog\\src\\app\\UICatalog6.1.app.zip");
+                appDirectory = new File("/Users/ilias/Desktop/MavenProjects/MobileAutomation2019/UiCatalog/src/app/UICatalog6.1.app.zip");
                 findApp = new File(appDirectory, "UICatalog6.1.app.zip");
                 if (deviceType.equalsIgnoreCase("RealDevice")) {
                     cap = new DesiredCapabilities();
